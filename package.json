@@ -6,8 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "format": "prettier . --write",
-    "lint": "eslint .",
+    "format": "prettier . --write && stylelint **/*.css --fix",
+    "lint": "eslint . && stylelint **/*.css",
     "preview": "vite preview",
     "prepare": "husky",
     "commit": "cz"
@@ -39,6 +39,9 @@
     "husky": "^9.1.7",
     "lint-staged": "^16.1.1",
     "prettier": "^3.5.3",
+    "stylelint": "^16.20.0",
+    "stylelint-config-recess-order": "^7.1.0",
+    "stylelint-config-standard": "^38.0.0",
     "typescript": "~5.8.3",
     "typescript-eslint": "^8.30.1",
     "vite": "^6.3.5"

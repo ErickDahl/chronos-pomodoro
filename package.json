@@ -10,6 +10,7 @@
     "lint": "eslint . && stylelint **/*.css",
     "preview": "vite preview",
     "prepare": "husky",
+    "generate": "npx plop --plopfile generators/plopfile.mjs",
     "commit": "cz"
   },
   "dependencies": {
@@ -39,6 +40,7 @@
     "globals": "^16.0.0",
     "husky": "^9.1.7",
     "lint-staged": "^16.1.1",
+    "plop": "^4.0.1",
     "prettier": "^3.5.3",
     "stylelint": "^16.20.0",
     "stylelint-config-recess-order": "^7.1.0",

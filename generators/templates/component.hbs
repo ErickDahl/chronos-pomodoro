@@ -1,0 +1,13 @@
+import styles from './styles.module.css';
+
+type {{pascalCase name}}Props = {
+  title?: string;
+};
+
+export function {{pascalCase name}}({ title }: Readonly<{{pascalCase name}}Props>) {
+  return (
+    <main className={`${styles['{{pascalCase name}}']}`}>
+      <h1>{title}</h1>
+    </main>
+  );
+}

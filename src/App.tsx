@@ -7,6 +7,7 @@ import { Button } from './components/Button';
 import { Container } from './components/Container';
 import { CountDown } from './components/CountDown';
 import { Cycles } from './components/Cycles';
+import { Footer } from './components/Footer';
 import { Input } from './components/Input';
 import { Logo } from './components/Logo';
 import { Menu } from './components/Menu';
@@ -30,6 +31,10 @@ function App() {
         <Input id={'task'} label={'task'} placeholder='text' />
         <Cycles />
         <Button icon={<PlayCircleIcon />} />
+      </Container>
+
+      <Container>
+        <Footer />
       </Container>
     </>
   );

@@ -1,6 +1,9 @@
 import './styles/theme.css';
 import './styles/global.css';
 
+import { PlayCircleIcon } from 'lucide-react';
+
+import { Button } from './components/Button';
 import { Container } from './components/Container';
 import { CountDown } from './components/CountDown';
 import { Cycles } from './components/Cycles';
@@ -26,6 +29,7 @@ function App() {
       <Container>
         <Input id={'task'} label={'task'} placeholder='text' />
         <Cycles />
+        <Button icon={<PlayCircleIcon />} />
       </Container>
     </>
   );

@@ -1,43 +1,10 @@
 import './styles/theme.css';
 import './styles/global.css';
 
-import { PlayCircleIcon } from 'lucide-react';
-
-import { Button } from './components/Button';
-import { Container } from './components/Container';
-import { CountDown } from './components/CountDown';
-import { Cycles } from './components/Cycles';
-import { Footer } from './components/Footer';
-import { Input } from './components/Input';
-import { Logo } from './components/Logo';
-import { Menu } from './components/Menu';
+import { Home } from './pages/home';
 
 function App() {
-  return (
-    <>
-      <Container>
-        <Logo />
-      </Container>
-
-      <Container>
-        <Menu />
-      </Container>
-
-      <Container>
-        <CountDown />
-      </Container>
-
-      <Container>
-        <Input id={'task'} label={'task'} placeholder='text' />
-        <Cycles />
-        <Button icon={<PlayCircleIcon />} />
-      </Container>
-
-      <Container>
-        <Footer />
-      </Container>
-    </>
-  );
+  return <Home />;
 }
 
 export { App };

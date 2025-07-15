@@ -2,6 +2,7 @@ import { useEffect, useState, type MouseEvent } from 'react';
 import {
   HistoryIcon,
   HouseIcon,
+  MoonIcon,
   SettingsIcon,
   SunIcon,
   type LucideIcon,
@@ -20,7 +21,11 @@ interface MenuItem {
 }
 
 const Menu = () => {
-  const [theme, setTheme] = useState<AvailableThemes>('dark');
+  const [theme, setTheme] = useState<AvailableThemes>(() => {
+    const storeTheme =
+      (localStorage.getItem('theme') as AvailableThemes) || 'dark';
+    return storeTheme;
+  });
   const iconSize: number = 24;
 
   const itemActions: Record<
@@ -48,6 +53,11 @@ const Menu = () => {
     },
   };
 
+  const themeIcon: Record<AvailableThemes, LucideIcon> = {
+    dark: SunIcon,
+    light: MoonIcon,
+  };
+
   const menuItems: MenuItem[] = [
     {
       id: 'home',
@@ -73,7 +83,7 @@ const Menu = () => {
     {
       id: 'theme',
       href: '/theme',
-      icon: SunIcon,
+      icon: themeIcon[theme],
       ariaLabel: 'Alternar tema',
       title: 'Alternar tema',
     },
@@ -94,6 +104,7 @@ const Menu = () => {
 
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
   }, [theme]);
 
   return (

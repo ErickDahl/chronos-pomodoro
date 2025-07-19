@@ -7,7 +7,7 @@ import { Home } from './pages/Home';
 function App() {
   return (
     <TaskContextProvider>
-      <Home />;
+      <Home />
     </TaskContextProvider>
   );
 }

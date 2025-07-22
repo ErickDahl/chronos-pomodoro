@@ -1,5 +1,6 @@
 import {
   createContext,
+  useEffect,
   useMemo,
   useState,
   type Dispatch,
@@ -33,6 +34,10 @@ const TaskContextProvider = ({ children }: TaskContextProviderProps) => {
     () => ({ state, setState }),
     [state, setState],
   );
+
+  useEffect(() => {
+    console.log(state);
+  }, [state]);
 
   return <TaskContext.Provider value={value}>{children}</TaskContext.Provider>;
 };
